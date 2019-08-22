@@ -1,32 +1,52 @@
-const express =  require('express');
+const express = require('express');
 const router = express.Router();
 
-//Home Router
 router.get('/',(req,res) =>{
     let articles = [
         {
             id:1,
-            title:'Articulo Uno',
-            body:'This is article one'
+            title: 'Articulo Uno',
+            author: 'Juan Ortiz',
+            body: 'this is article one'
+        },
+        {
+            id:2,
+            title: 'Articulo Dos',
+            author: 'Ortiz Valenzuela',
+            body: 'this is article two'
+        },
+        {
+            id:3,
+            title: 'Articulo Tres',
+            author: 'Juan ESteban',
+            body: 'this is article three'
         }
     ];
-    res.render('index.pug',{
-        title: 'Articles',
+    res.render('index.pug', {
+        title: 'Articulos',
         articles: articles
     });
 });
 
-router.get('/index',(req, res, next) =>{
-    res.render('index.pug')
+
+router.get('/articles/add',(req,res) =>{
+    res.render('add_article.pug',{
+        title: 'Agregar Articulos'
+    });
 });
 
-//add Router
-router.get('/',(req,res) =>{
-    res.render('add_article.pug')
+router.post('/articles/add', function(req, res){
 });
 
-router.get('/add_article',(req, res, next) =>{
-    res.render('add_article.pug')
-});
+
+router.get('/users/register', (req,res) =>{
+    res.render('register.pug');
+})
+
+
+router.get('/users/login', (req,res) =>{
+    res.render('login.pug');
+})
+
 
 module.exports = router;

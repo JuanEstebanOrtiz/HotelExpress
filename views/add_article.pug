@@ -2,7 +2,7 @@ extends layout
 
 block content
     h1 Agregar Articulos
-    form(action='/articles/add')
+    form(action='/articles/add', method='POST')
         #form-group
             label Title:
             input.form-control(type="text", name='title')
