@@ -1,13 +1,20 @@
 extends layout
 
 block content
-    h1 Login
-    form(method='POST', action='/users/login')
-        #form-group
+    hr
+    br
+    form.form-signin
+        .col-lg-1.item.social
+            include ../public/img/businessman.svg
+        .text-center.mb-4
+            h1.h3.mb-3.font-weight-normal Login
+            p Build form controls with floating labels via the code:placeholder-shown pseudo-element. 
+                a Works in latest Chrome, Safari, and Firefox.
+        .form-label-group
             label Username:
-            input.form-control(name='username',type='text')
-        #form-group
+            input#inputEmail.form-control(type='email' placeholder='Email address')
+        .form-label-group
             label Password:
-            input.form-control(name='password',type='password')
+            input.form-control(type='password' placeholder='Password')
         br
-        input.btn.btn-primary(type='submit',value='Submit')
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in

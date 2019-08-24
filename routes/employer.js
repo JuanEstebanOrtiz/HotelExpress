@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/admin', (req,res) =>{
-    res.render('login_admin.pug')
+router.get('/employer', (req,res) =>{
+    res.render('login_employer.pug')
 })
 
 module.exports = router;

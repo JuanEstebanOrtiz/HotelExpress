@@ -1,36 +1,36 @@
 doctype html
 html
-  head
-    title ServiHotel
-    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
-    link(rel='stylesheet' href='/css/style.css')
-  body
-    nav.navbar.navbar-inverse
-        .container
-            .navbar-header
-                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
+    head
+        title ServiHotel
+        link(rel='stylesheet' href='/css/bootstrap.min.css')
+    body
+        header
+            nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
                 a.navbar-brand(href='/') ServiHotel
-            #navbar.collapse.navbar-collapse
-                ul.nav.navbar-nav
-                    li
-                        a(href='/') Home
-                    li
-                        a(href='/articles/add') Add Article
-                ul.nav.navbar-nav.navbar-right
-                    li
-                        a(href='/users/register') Register
-                    li
-                        a(href='/users/login') Login
-    .container
-        block content
-        br
-        hr
-        footer
-            p Copyright &copy; 2019
-    script(src='/bower_components/jquery/dist/jquery.js')  
-    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
-    script(src='/js/main.js')  
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarCollapse.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                        li.nav-item.active
+                            a.nav-link(href='/') Home 
+                        li.nav-item
+                            a.nav-link(href='/articles/add') Add Articles
+                    ul.nav.navbar-nav.navbar-right
+                        li.nav-item.active
+                            a.nav-link(href='/users/register') Registro
+                        li.nav-item
+                            a.nav-link(href='/users/login') Login
+        .container
+            block content
+            br
+            footer.container
+                p &copy; 2019 Company, Inc. &middot;
+                    a(href='#') Privacy &middot; 
+                    a(href='#') Terms
+                    br
+                    a(href='#') Back to top
+                p Copyright &copy; 2019
+    
+        script(src='/js/jquery-3.4.1.min.js') 
+        script(src='/js/popper.min.js')  
+        script(src='/js/bootstrap.min.js')
