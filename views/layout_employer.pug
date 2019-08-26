@@ -6,20 +6,21 @@ html
     body
         header
             nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
-                a.navbar-brand(href='/') ServiHotel
-                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+                a.navbar-brand(href='/employer/index_employer') EmployerServiHotel
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
                     span.navbar-toggler-icon
-                #navbarCollapse.collapse.navbar-collapse
+                #navbarsExampleDefault.collapse.navbar-collapse
                     ul.navbar-nav.mr-auto
                         li.nav-item.active
-                            a.nav-link(href='/') Home 
+                            a.nav-link(href='/employer/index_employer') Home 
                         li.nav-item
-                            a.nav-link(href='/articles/add') Add Articles
+                            a.nav-link(href='/employer/table_employer_customer') Customers
+                    form.form-inline.my-2.my-lg-0
+                        input.form-control.mr-sm-2(type='text' placeholder='Search' aria-label='Search')
+                        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
                     ul.nav.navbar-nav.navbar-right
-                        li.nav-item.active
-                            a.nav-link(href='/users/register') Registro
                         li.nav-item
-                            a.nav-link(href='/users/login') Login
+                            a.nav-link(href='/employer') Sign off
         .container
             block content
             br

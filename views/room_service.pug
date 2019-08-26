@@ -1,0 +1,21 @@
+extends layout_customer
+
+block content
+    hr
+    br
+    h1 Room Service
+    form(action='/users/register', method='POST')
+        #form-group
+            label Numero De Habitacion:
+            input.form-control(type="number", name='email')
+        #form-group
+            label asunto:
+            input.form-control(type="text", name='name')
+        #form-group
+            label Descripcion:
+            input.form-control(type="text", name='email')
+        #form-group
+            label Total:
+            input.form-control(type="number", name='username')
+        br
+        input.btn.btn-primary(type="submit", value='Enviar')
